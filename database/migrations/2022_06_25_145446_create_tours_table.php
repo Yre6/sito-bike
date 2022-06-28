@@ -19,12 +19,12 @@ class CreateToursTable extends Migration
             $table->string('name', 300);
             $table->string('slug', 300);
             $table->smallInteger('distance');
-            $table->smallInteger('altitude-delta');
+            $table->smallInteger('altitude_delta');
             $table->string('duration', 70);
-            $table->string('link-gps', 200);
+            $table->string('link_gps', 200);
             $table->text('description')->nullable;
-            $table->string('map-image');
-            $table->string('altimetry-image');
+            $table->string('map_image');
+            $table->string('altimetry_image');
 
         });
     }

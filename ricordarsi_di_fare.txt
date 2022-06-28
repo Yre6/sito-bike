@@ -1,5 +1,3 @@
-// Manca il seeder della tabella TOUR 
 
-// Manca la RELAZIONE tra TOUR-ENVIRONMENT
 
 // Capire come funziona lo STORAGE delle immagini
