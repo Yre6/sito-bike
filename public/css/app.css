@@ -1,11 +1,6 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;
 
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+500;600;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);@charset "UTF-8";
 
 :root {
   --bs-blue: #0d6efd;
@@ -12147,5 +12142,73 @@ fieldset:disabled .btn {
   .d-print-none {
     display: none !important;
   }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 100px;
+  padding: 25px;
+}
+
+#homepage-main {
+  height: calc(100vh - 100px);
+}
+
+#homepage-main h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 60px;
+}
+
+#homepage-main h5 {
+  font-family: "Roboto", sans-serif;
+}
+
+#homepage-main img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.arrow-button button {
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  height: 60px;
+  padding: 0 25px;
+  border: 1px solid #f8b600;
+  background: white;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.arrow-button button a {
+  text-decoration: none;
+  color: black;
+}
+
+.arrow-button button a:visited {
+  color: black;
+}
+
+.arrow-button img {
+  width: 60px;
+  height: 20px;
+  margin-left: -20px;
+  top: 20px;
+}
+
+.arrow-button:hover img {
+  margin-left: -10px;
+  transition-duration: 0.3s;
+}
+
+.arrow-button:hover button {
+  background-color: #f8b600;
+  transition-duration: 0.3s;
 }
 
