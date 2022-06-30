@@ -14,4 +14,9 @@ class TourController extends Controller
 
         return view('guest.valleys', compact('valleys'));
     }
+
+    public function index(Valley $valley){
+
+        return view('guest.index', compact('valley'));
+    }
 }

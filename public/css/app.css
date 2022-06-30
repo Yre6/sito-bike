@@ -12184,6 +12184,26 @@ header {
   font-size: 80px;
 }
 
+.container-valleys .container-card-valley {
+  margin-right: -15px;
+}
+
+.container-valleys .card-valley {
+  height: 180px;
+  width: 30%;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.container-valleys .card-valley a {
+  text-decoration: none;
+  color: black;
+}
+
+.container-valleys .card-valley a:visited {
+  color: black;
+}
+
 .arrow-button button {
   font-family: "Roboto", sans-serif;
   width: auto;

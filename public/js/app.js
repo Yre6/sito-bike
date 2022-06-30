@@ -19380,10 +19380,6 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var area = document.querySelector('.val-di-scalve');
-console.log(area);
-area.style.filter = "grayscale(100%)";
-
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

@@ -5,5 +5,20 @@
         font-weight: 400;
         font-size: 80px;
     }
-    
+    .container-card-valley{
+        margin-right: -15px;
+    }
+    .card-valley {
+        height: 180px;
+        width: 30%;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        a {
+            text-decoration: none;
+            color: black;
+            &:visited {
+                color: black;
+            }
+        }
+    }
 }
