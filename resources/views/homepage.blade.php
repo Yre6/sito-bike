@@ -11,7 +11,7 @@
 
             <div class="arrow-button position-relative">
                 <button>
-                    <a href="">SCOPRI DI PI&Ugrave;</a>
+                    <a href="{{route('sections')}}">SCOPRI DI PI&Ugrave;</a>
                 </button>   
                 <img class="position-absolute " src="{{asset('img/arrow.png')}}" alt="">
             </div>

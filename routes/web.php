@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
+
+Route::get('/sezioni', function () {
+    return view('guest.sections');
+})->name('sections');
+
+/* Route::get('/percorsi', function () {
+    return view('guest.tours.index');
+})->name('guest.tours.index'); */
+
+Route::get('/percorsi', 'TourController@valleys')->name('guest.valleys'); 
