@@ -12174,6 +12174,16 @@ header {
      object-fit: cover;
 }
 
+.container-valleys {
+  height: calc(100vh - 100px);
+}
+
+.container-valleys h1 {
+  font-family: "Lobster Two", cursive;
+  font-weight: 400;
+  font-size: 80px;
+}
+
 .arrow-button button {
   font-family: "Roboto", sans-serif;
   width: auto;
