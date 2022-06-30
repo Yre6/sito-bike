@@ -4,8 +4,7 @@
 <div id="homepage-main" class="d-flex">
     <div class="col-6 d-flex justify-content-center">
         <div class="w-50 m-auto d-flex flex-column justify-content-center">
-            <h1 class="mb-3">Araig <br> Mountain Bike
-            Santorini</h1>
+            <h1 class="mb-3">Araig <br> Mountain Bike</h1>
             <h5 class="fw-normal mb-5">
             Amore per la montagna, passione per le due ruote.
             </h5>

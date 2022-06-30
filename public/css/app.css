@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;
+@import url(https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap);@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;
 
-500;600;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);@charset "UTF-8";
+400;500&display=swap);@charset "UTF-8";
 
 :root {
   --bs-blue: #0d6efd;
@@ -12160,9 +12160,9 @@ header {
 }
 
 #homepage-main h1 {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  font-size: 60px;
+  font-family: "Lobster Two", cursive;
+  font-weight: 400;
+  font-size: 80px;
 }
 
 #homepage-main h5 {
