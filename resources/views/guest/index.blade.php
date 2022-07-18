@@ -6,7 +6,10 @@
 
 @foreach($valley->tours as $tour)
 
-{{$tour->name}}
+
+    {{$tour->name}}
+
+
 
 @endforeach
 

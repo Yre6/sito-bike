@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Valley;
+use App\Models\Tour;
 
 use Illuminate\Http\Request;
 
@@ -19,4 +20,12 @@ class TourController extends Controller
 
         return view('guest.index', compact('valley'));
     }
+
+   /*  public function show(){
+
+
+        return view('guest.show');
+
+
+    } */
 }

@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap);@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;
 
-400;500&display=swap);/* required styles */
+400;500&display=swap);@import url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap);/* required styles */
 
 .leaflet-pane,
 .leaflet-tile,
@@ -12792,7 +12792,11 @@ fieldset:disabled .btn {
 
 header {
   height: 100px;
-  padding: 25px;
+  padding: 10px;
+}
+
+header .arrow-button {
+  margin: 15px 0;
 }
 
 #homepage-main {
@@ -12800,13 +12804,14 @@ header {
 }
 
 #homepage-main h1 {
-  font-family: "Lobster Two", cursive;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-size: 80px;
+  font-size: 73px;
 }
 
 #homepage-main h5 {
   font-family: "Roboto", sans-serif;
+  color: gray;
 }
 
 #homepage-main img {
@@ -12819,7 +12824,7 @@ header {
 }
 
 .container-valleys h1 {
-  font-family: "Lobster Two", cursive;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 80px;
 }
@@ -12845,9 +12850,9 @@ header {
 .arrow-button button {
   font-family: "Roboto", sans-serif;
   width: auto;
-  height: 60px;
+  height: 50px;
   padding: 0 25px;
-  border: 1px solid #f8b600;
+  border: 1px solid #669966;
   background: white;
   letter-spacing: 2px;
   font-size: 0.9rem;
@@ -12867,7 +12872,7 @@ header {
   width: 60px;
   height: 20px;
   margin-left: -20px;
-  top: 20px;
+  top: 15px;
 }
 
 .arrow-button:hover img {
@@ -12876,7 +12881,11 @@ header {
 }
 
 .arrow-button:hover button {
-  background-color: #f8b600;
+  background-color: #669966;
   transition-duration: 0.3s;
+}
+
+.arrow-button:hover button a {
+  color: white;
 }
 
