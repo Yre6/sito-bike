@@ -1,10 +1,8 @@
 require('./bootstrap');
-require('leaflet');
 
+require('leaflet/dist/leaflet.js');
 
-require('./valleys-vector')
-
-require('./valleys-logic')
+require('./valleys-logic');
 
 
 

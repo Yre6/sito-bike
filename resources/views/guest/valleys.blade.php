@@ -2,25 +2,20 @@
 
 @section('content')
 
-<div id="prova" class="container-valleys w-100">
-    <div class="w-75 h-100 m-auto d-flex">
-        <div class="col-6 d-flex flex-column justify-content-center align-items-center">
-            
-        <div id="map" class="map w-100 h-100 overflow-hidden">
+<div class="container-valleys w-75 m-auto d-flex">
+    
+        <div id="map" class="col-6 h-100">
             
         </div>
 
-
-
-        </div>
-        <div class="col-6 d-flex flex-column justify-content-around align-items-center">
+        <div class="col-6 d-flex flex-column justify-content-around align-items-center px-4">
             <h1>
                 Scopri i percorsi
             </h1>
-            <div class="container-card-valley d-flex flex-wrap">
+            <div class="container-card-valley d-flex flex-wrap justify-content-around">
                 @foreach ($valleys as $valley)
                    
-                    <div id="{{$valley->slug}}" class="card card-valley">
+                    <div id="{{$valley->slug}}" class="card card-valley mb-4">
                         <a class="h-100 w-100 d-flex flex-column justify-content-around align-items-center" href="{{route('guest.index', $valley->slug)}}">
                             <h3>{{$valley->name}}</h3>
                         
@@ -33,10 +28,12 @@
 
             </div>
         </div>
+        
 
-    </div>
+   
 
 </div>
 
 
 @endsection
+

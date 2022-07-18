@@ -1,5 +1,6 @@
 .container-valleys  {
     height: calc(100vh - 100px);
+    
     h1 {
         font-family: $font-title;
         font-weight: 400;
@@ -11,8 +12,6 @@
     .card-valley {
         height: 180px;
         width: 30%;
-        margin-right: 15px;
-        margin-bottom: 20px;
         a {
             text-decoration: none;
             color: black;
