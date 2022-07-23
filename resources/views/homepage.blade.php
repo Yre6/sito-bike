@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="homepage-main" class="d-flex">
-    <div class="col-6 d-flex justify-content-center">
+    <div class="col-6 d-flex justify-content-center p-0">
         <div class="w-50 m-auto d-flex flex-column justify-content-center">
             <h1 class="mb-3">Araig <br> Mountain Bike</h1>
             <h5 class="fw-normal mb-5">
@@ -18,7 +18,7 @@
         </div>
        
     </div>
-    <div class="col-6">
+    <div class="col-6 p-0">
         <img class="w-100 h-100" src="{{asset('img/jumbo.jpg')}}" alt="">
     </div>
 
