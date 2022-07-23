@@ -12,6 +12,18 @@
     .card-valley {
         height: 180px;
         width: 30%;
+        border: 1px solid #669966;
+        border-radius: 0;
+        &:hover {
+            background-color: #669966;
+            transition-duration: 0.3s;
+            a {
+                color: white;
+                &:visited {
+                    color: white;
+                }
+            }
+        }
         a {
             text-decoration: none;
             color: black;

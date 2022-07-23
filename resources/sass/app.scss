@@ -1,56 +1,8 @@
-@use 'bootstrap';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
-@import "~leaflet/dist/leaflet.css";
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
+// Variables
 @import 'variables';
-@import 'guest.header';
-@import 'guest.homepage';
-@import 'guest.valleys';
 
-.arrow-button {
-    button {
-        font-family: $font-text;
-        width: auto;
-        height: 50px;
-        padding: 0 25px;
-        border: 1px solid #669966;
-        background: white;
-        letter-spacing: 2px;
-        font-size: 0.9rem;
-        font-weight: 400;
-        a {
-            text-decoration: none;
-            color: black;
-            &:visited {
-                color: black;
-            }
-        }
-    }
-    img {
-        width: 60px;
-        height: 20px;
-        margin-left: -20px;
-        top: 15px;
-    }
-    &:hover img{
-        margin-left: -10px;
-        transition-duration: 0.3s;
-    }
-    &:hover button {
-        background-color: #669966;
-        transition-duration: 0.3s;
-        a {
-            color: white;
-        }
-    }
-}
-
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';

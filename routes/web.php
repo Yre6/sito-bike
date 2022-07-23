@@ -27,3 +27,7 @@ Route::get('/percorsi', 'TourController@valleys')->name('guest.valleys');
 Route::get('/percorsi/{valley:slug}', 'TourController@index')->name('guest.index'); 
 
 Route::get('/percorsi/{valley:slug}/{tour:slug}', 'TourController@show')->name('guest.show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
