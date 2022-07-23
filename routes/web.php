@@ -22,12 +22,8 @@ Route::get('/sezioni', function () {
     return view('guest.sections');
 })->name('sections');
 
-/* Route::get('/percorsi', function () {
-    return view('guest.tours.index');
-})->name('guest.tours.index'); */
-
 Route::get('/percorsi', 'TourController@valleys')->name('guest.valleys'); 
 
 Route::get('/percorsi/{valley:slug}', 'TourController@index')->name('guest.index'); 
 
-/* Route::get('/percorsi/{valley:slug}/{tour:slug}', 'TourController@show')->name('guest.show'); */
+Route::get('/percorsi/{valley:slug}/{tour:slug}', 'TourController@show')->name('guest.show');

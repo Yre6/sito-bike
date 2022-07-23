@@ -6,8 +6,8 @@
 
 @foreach($valley->tours as $tour)
 
-
-    {{$tour->name}}
+    <a href="{{route('guest.show', [$valley->slug, $tour->slug])}}">{{$tour->name}}</a>
+    
 
 
 

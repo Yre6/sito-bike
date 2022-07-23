@@ -2,4 +2,3 @@
 
 // Capire come funziona lo STORAGE delle immagini
 
-// Capire come passare i giusti dati allo show dei tour

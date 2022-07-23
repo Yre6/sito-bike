@@ -21,11 +21,11 @@ class TourController extends Controller
         return view('guest.index', compact('valley'));
     }
 
-   /*  public function show(){
+    public function show(Valley $valley, Tour $tour){
 
 
-        return view('guest.show');
+        return view('guest.show', compact('valley', 'tour'));
 
 
-    } */
+    }
 }

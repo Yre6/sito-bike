@@ -3,7 +3,7 @@
 @section('content')
 
 
-<h1>TOUR </h1>
+<h1>{{ $tour->name }}</h1>
 
 
 @endsection
