@@ -11681,6 +11681,30 @@ header .arrow-button {
   color: black;
 }
 
+#main-sections {
+  height: calc(100vh - 100px);
+}
+
+#main-sections h1 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 73px;
+}
+
+#main-sections #container-sections .card-sections {
+  width: 30%;
+}
+
+#main-sections #container-sections .card-sections a {
+  text-decoration: none;
+  color: black;
+}
+
+#main-sections #container-sections .card-sections a:visited {
+  color: black;
+}
+
 .arrow-button button {
   font-family: "Roboto", sans-serif;
   width: auto;

@@ -1,0 +1,23 @@
+#main-sections {
+    height: calc(100vh - 100px);
+
+    h1 {
+        font-family: $font-title;
+        text-align: center;
+        font-weight: 400;
+        font-size: 73px;
+    }
+
+    #container-sections {
+        .card-sections {
+            width: 30%;
+            a {
+                text-decoration: none;
+                color: black;
+                &:visited {
+                    color: black;
+                }
+            }
+        }
+    }
+}
