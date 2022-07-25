@@ -2,3 +2,8 @@
 
 // Capire come funziona lo STORAGE delle immagini
 
+// sottotitoli pagina sections
+
+// sistemare grafica pagina sections
+
+// capire dove mettere accesso alla sezione admin

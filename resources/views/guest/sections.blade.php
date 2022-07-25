@@ -12,9 +12,9 @@
             <img src="{{asset('img/sections-tours.jpg')}}" class="card-img-top h-50" alt="..." />
 
             <div class="card-body">
-            <h5 class="card-title">Percorsi</h5>
+            <h3 class="card-title">Percorsi</h3>
             <p class="card-text">
-                
+                Presentazione, tracce, caratteristiche e foto di percorsi provati
             </p>
             </div>
         </a>
@@ -26,7 +26,7 @@
             <img src="{{asset('img/sections-about.jpg')}}" class="card-img-top h-50" alt="..." />
 
                 <div class="card-body">
-                    <h5 class="card-title">About MTB</h5>
+                    <h3 class="card-title">About MTB</h3>
                     <p class="card-text">
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.
@@ -43,7 +43,7 @@
             <img src="{{asset('img/section-news.jpg')}}" class="card-img-top h-50" alt="..." />
 
                 <div class="card-body">
-                    <h5 class="card-title">News</h5>
+                    <h3 class="card-title">News</h3>
                     <p class="card-text">
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.

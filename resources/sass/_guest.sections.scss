@@ -11,11 +11,22 @@
     #container-sections {
         .card-sections {
             width: 30%;
+            font-family: $font-text;
+            &:hover {
+                box-shadow: 5px 5px 10px rgb(231, 228, 228);
+            }
             a {
                 text-decoration: none;
                 color: black;
                 &:visited {
                     color: black;
+                }
+                .card-img-top {
+                    object-fit: cover;
+                }
+                .card-title {
+                    font-family: $font-title;
+                    font-weight: 300;
                 }
             }
         }

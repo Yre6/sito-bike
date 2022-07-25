@@ -11694,6 +11694,11 @@ header .arrow-button {
 
 #main-sections #container-sections .card-sections {
   width: 30%;
+  font-family: "Roboto", sans-serif;
+}
+
+#main-sections #container-sections .card-sections:hover {
+  box-shadow: 5px 5px 10px rgb(231, 228, 228);
 }
 
 #main-sections #container-sections .card-sections a {
@@ -11703,6 +11708,16 @@ header .arrow-button {
 
 #main-sections #container-sections .card-sections a:visited {
   color: black;
+}
+
+#main-sections #container-sections .card-sections a .card-img-top {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#main-sections #container-sections .card-sections a .card-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
 }
 
 .arrow-button button {
