@@ -19,7 +19,7 @@
                         <a class="h-100 w-100 d-flex flex-column justify-content-around align-items-center" href="{{route('guest.index', $valley->slug)}}">
                             <h3>{{$valley->name}}</h3>
                         
-                        <h6>{{$valley->tours->count()}} Percorsi </h6>
+                        <h6>{{$valley->tours->count()}} @if ($valley->tours->count() == 1) Percorso @else Percorsi @endif </h6>
                         </a>
                         
 

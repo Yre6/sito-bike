@@ -7,3 +7,5 @@
 // sistemare grafica pagina sections
 
 // capire dove mettere accesso alla sezione admin
+
+// sistemare grafica mappa 

@@ -31,3 +31,9 @@ Route::get('/percorsi/{valley:slug}/{tour:slug}', 'TourController@show')->name('
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+    Route::get('/tours', 'TourController@index')->name('tours.index');
+});

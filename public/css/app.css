@@ -11638,6 +11638,10 @@ header .arrow-button {
      object-fit: cover;
 }
 
+#homepage-main #auth-access {
+  bottom: 0;
+}
+
 .container-valleys {
   height: calc(100vh - 100px);
 }
@@ -11657,6 +11661,7 @@ header .arrow-button {
   width: 30%;
   border: 1px solid #669966;
   border-radius: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .container-valleys .card-valley:hover {
