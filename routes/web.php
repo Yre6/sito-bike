@@ -36,4 +36,6 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
     Route::get('/tours', 'TourController@index')->name('tours.index');
+    Route::get('/tours/create', 'TourController@create')->name('tours.create');
+    Route::post('tours/create', 'TourController@store')->name('tours.store');
 });
