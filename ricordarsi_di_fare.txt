@@ -9,3 +9,6 @@
 // capire dove mettere accesso alla sezione admin
 
 // sistemare grafica mappa 
+
+// Aggiungere campo scelta multipla VALLI sul form di creazione percorso, aggiungere validazione
+// Aggiungere campo scelta multipla ENVIRONMENt sul form di creazione percorso, aggiungere validazione

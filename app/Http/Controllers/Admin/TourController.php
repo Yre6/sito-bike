@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+
 use App\Models\Tour;
 
 class TourController extends Controller
@@ -40,7 +43,38 @@ class TourController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'name' => 'nullable|max:300',
+            'distance' => 'nullable',
+            'altitude_delta' => 'nullable',
+            'duration' => 'nullable',
+            'description' => 'nullable',
+            'link_gps' => 'nullable',
+            'map_image' => ['nullable', 'mimes:jpeg,jpg,png,gif,bmp,svg,webp', 'max:1024'],
+            'altimetry_image' => ['nullable', 'mimes:jpeg,jpg,png,gif,bmp,svg,webp', 'max:1024'],
+            /* 'category_id' => 'nullable|exists:categories,id' */
+        ]);
+        if ($request->file('map_image')) {
+            $map_image = Storage::put('tours_maps', $request->file('map_image'));
+            $validate['map_image'] = $map_image;
+        }
+        if ($request->file('altimetry_image')) {
+            $altimetry_image = Storage::put('tours_altimetries', $request->file('altimetry_image'));
+            $validate['altimetry_image'] = $altimetry_image;
+        }
+
+        $validate['slug'] = Str::slug($request->name);
+        /* ddd($validate); */
+        $tour = Tour::create($validate);
+
+        /* if ($request->has('tags')) {
+            $request->validate([
+                'tags' => 'nullable|exists:tags,id'
+            ]);
+            $post->tags()->attach($request->tags);
+        } */
+
+        return redirect()->route('admin.tours.index');
     }
 
     /**

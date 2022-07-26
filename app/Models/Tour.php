@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tour extends Model
 {
-
+    protected $fillable = ['name','distance','duration','altitude_delta','description','link_gps','map_image','altimetry_image','slug'];
+    
     public function getRouteKeyName(){ return 'slug'; }
 
     public function valley(){
