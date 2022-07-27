@@ -38,4 +38,6 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->
     Route::get('/tours', 'TourController@index')->name('tours.index');
     Route::get('/tours/create', 'TourController@create')->name('tours.create');
     Route::post('tours/create', 'TourController@store')->name('tours.store');
+    Route::get('/tours/{tour:slug}/edit', 'TourController@edit')->name('tours.edit');
+    Route::put('tours/{tour:slug}', 'TourController@update')->name('tours.update');
 });

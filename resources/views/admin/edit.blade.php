@@ -2,15 +2,16 @@
 
 @section('content')
 
-<h1> Crea un nuovo percorso</h1>
+<h1> Modifica il percorso </h1>
 
-<form action="{{route('admin.tours.store')}}" enctype="multipart/form-data" method="post">
+<form action="{{route('admin.tours.update', $tour->slug)}}" enctype="multipart/form-data" method="post">
     @csrf
+    @method('PUT')
 
     <!-- Name Input -->
     <div class="mb-3">
         <label for="name" class="form-label">Nome del percorso</label>
-        <input required type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" placeholder="Inserisci il nome del percorso" value="{{ old('name') }}" maxlength="300">
+        <input required type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" placeholder="Inserisci il nome del percorso" value="{{ $tour->name }}" maxlength="300">
         <small id="nameHelper" class="text-muted">Assicurati di non superare i 300 caratteri, spazi inclusi.</small>
         @error('name')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -22,7 +23,7 @@
        <label for="distance" class="form-label">Lunghezza del percorso</label>
         <div class="input-group">
             <span class="input-group-text" id="basic-addon1">km</span>
-            <input required type="text" name="distance" id="distance" class="form-control @error('distance') is-invalid @enderror" placeholder="" value="{{ old('distance') }}">
+            <input required type="text" name="distance" id="distance" class="form-control @error('distance') is-invalid @enderror" placeholder="" value="{{ $tour->distance }}">
         </div>
         <small id="distanceHelper" class="text-muted">Inserisci un numero intero</small>
         @error('distance')
@@ -35,7 +36,7 @@
        <label for="altitude_delta" class="form-label">Dislivello</label>
         <div class="input-group">
             <span class="input-group-text" id="basic-addon1">m</span>
-            <input required type="text" name="altitude_delta" id="altitude_delta" class="form-control @error('altitude_delta') is-invalid @enderror" placeholder="" value="{{ old('altitude_delta') }}">
+            <input required type="text" name="altitude_delta" id="altitude_delta" class="form-control @error('altitude_delta') is-invalid @enderror" placeholder="" value="{{ $tour->altitude_delta }}">
         </div>
         <small id="altitude_deltaHelper" class="text-muted">Inserisci un numero intero</small>
         @error('altitude_delta')
@@ -46,7 +47,7 @@
     <!-- Duration Input -->
     <div class="mb-3">
         <label for="duration" class="form-label">Durata</label>
-        <input required type="text" name="duration" id="duration" class="form-control @error('duration') is-invalid @enderror" placeholder="Inserisci la durata del percorso" value="{{ old('duration') }}" maxlength="70">
+        <input required type="text" name="duration" id="duration" class="form-control @error('duration') is-invalid @enderror" placeholder="Inserisci la durata del percorso" value="{{ $tour->duration }}" maxlength="70">
         @error('duration')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
@@ -55,7 +56,7 @@
     <!-- Description Input -->
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione del percorso</label>
-        <textarea class="form-control @error('description') is-invalid @enderror" type="text" name="description" id="description" placeholder="Inserisci la descrizione del percorso" aria-describedby="helpId">{{old('description')}}</textarea>
+        <textarea class="form-control @error('description') is-invalid @enderror" type="text" name="description" id="description" placeholder="Inserisci la descrizione del percorso" aria-describedby="helpId">{{$tour->description}}</textarea>
         @error('description')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
@@ -64,7 +65,7 @@
     <!-- Link Gps Input -->
     <div class="mb-3">
         <label for="link_gps" class="form-label mb-4">Link traccia GPS</label>
-        <input type="text" name="link_gps" id="link_gps" placeholder="" aria-describedby="link_gpsHelper" class="form-control @error('link_gps') is-invalid @enderror">
+        <input type="text" name="link_gps" id="link_gps" placeholder="" aria-describedby="link_gpsHelper" class="form-control @error('link_gps') is-invalid @enderror" value=""{{$tour->link_gps}}>
         @error('link_gps')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
@@ -94,11 +95,8 @@
     <div class="mb-3">
     <label for="valley_id" class="form-label">Valle</label>
         <select class="" name="valley_id" id="valley_id">
-            <option value="" selected>Scegli la valle</option>
-            @foreach ($valleys as $valley)
-            <option value="{{$valley->id}}">
-                {{$valley->name}}
-            </option>
+        @foreach ($valleys as $valley)
+            <option value="{{$valley->id}}" {{$valley->id === $tour->valley->id ? 'selected' : ''}}>{{$valley->name}}</option>
             @endforeach
         </select>
         @error('valley_id')
@@ -110,11 +108,8 @@
     <div class="mb-3">
     <label for="environment_id" class="form-label">Caratteristica</label>
         <select class="" name="environment_id" id="environment_id">
-            <option value="" selected>Scegli la tipologia di ambiente</option>
             @foreach ($environments as $environment)
-            <option value="{{$environment->id}}">
-                {{$environment->name}}
-            </option>
+            <option value="{{$environment->id}}" {{$environment->id === $tour->environment->id ? 'selected' : ''}}>{{$environment->name}}</option>
             @endforeach
         </select>
         @error('environment_id')

@@ -10,5 +10,4 @@
 
 // sistemare grafica mappa 
 
-// Aggiungere campo scelta multipla VALLI sul form di creazione percorso, aggiungere validazione
-// Aggiungere campo scelta multipla ENVIRONMENt sul form di creazione percorso, aggiungere validazione
+// aggiungere valore pre-esistente delle IMMAGINI nel form EDIT

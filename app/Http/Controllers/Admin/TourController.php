@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 use App\Models\Tour;
+use App\Models\Valley;
+use App\Models\Environment;
 
 class TourController extends Controller
 {
@@ -32,7 +34,9 @@ class TourController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        $valleys = Valley::all();
+        $environments = Environment::all();
+        return view('admin.create', compact('valleys','environments'));
     }
 
     /**
@@ -52,7 +56,8 @@ class TourController extends Controller
             'link_gps' => 'nullable',
             'map_image' => ['nullable', 'mimes:jpeg,jpg,png,gif,bmp,svg,webp', 'max:1024'],
             'altimetry_image' => ['nullable', 'mimes:jpeg,jpg,png,gif,bmp,svg,webp', 'max:1024'],
-            /* 'category_id' => 'nullable|exists:categories,id' */
+            'valley_id' => 'nullable|exists:valleys,id',
+            'environment_id' => 'nullable|exists:environments,id',
         ]);
         if ($request->file('map_image')) {
             $map_image = Storage::put('tours_maps', $request->file('map_image'));
@@ -67,13 +72,6 @@ class TourController extends Controller
         /* ddd($validate); */
         $tour = Tour::create($validate);
 
-        /* if ($request->has('tags')) {
-            $request->validate([
-                'tags' => 'nullable|exists:tags,id'
-            ]);
-            $post->tags()->attach($request->tags);
-        } */
-
         return redirect()->route('admin.tours.index');
     }
 
@@ -83,7 +81,7 @@ class TourController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Tour $tour)
     {
         //
     }
@@ -94,9 +92,11 @@ class TourController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Tour $tour)
     {
-        //
+        $valleys = Valley::all();
+        $environments = Environment::all();
+        return view('admin.edit', compact('tour','valleys','environments'));
     }
 
     /**
@@ -106,7 +106,7 @@ class TourController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tour $tour)
     {
         //
     }
