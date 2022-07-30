@@ -60,11 +60,13 @@ class TourController extends Controller
             'environment_id' => 'nullable|exists:environments,id',
         ]);
         if ($request->file('map_image')) {
-            $map_image = Storage::put('tours_maps', $request->file('map_image'));
+            $map_image = Storage::put('tours_maps', $request->file('map_image'),'public');
             $validate['map_image'] = $map_image;
-        }
+            
+        }  
+        
         if ($request->file('altimetry_image')) {
-            $altimetry_image = Storage::put('tours_altimetries', $request->file('altimetry_image'));
+            $altimetry_image = Storage::put('tours_altimetries', $request->file('altimetry_image'),'public');
             $validate['altimetry_image'] = $altimetry_image;
         }
 
